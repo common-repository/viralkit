@@ -1,0 +1,597 @@
+.viralkit_body {
+  background-color: white;
+  padding: 20px;
+  height: 100%;
+}
+
+/* Materialize Input focus */
+.viralkit_body input[type="text"]:focus:not([readonly]) + label,
+.viralkit_body input[type="email"]:focus:not([readonly]) + label {
+  color: #0000ba !important;
+}
+
+.viralkit_body input[type="text"]:focus:not([readonly]),
+.viralkit_body input[type="email"]:focus:not([readonly]) {
+  border-bottom: 1px solid #0000ba !important;
+  box-shadow: 0 1px 0 0 #0000ba !important;
+}
+
+/* Buttons */
+.viralkit_body .btn,
+.viralkit_body .btn:hover {
+  background-color: #0000ba !important;
+}
+
+.viralkit_body .btn-outline,
+.viralkit_body .btn-outline:hover {
+  border: 1px solid #0000ba !important;
+  background-color: #fff !important;
+  color: #0000ba !important;
+}
+
+/* Add a new class for the spinner's container */
+.viralkit_body .spinner-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999999999;
+}
+
+.viralkit_body body.loading .spinner-container {
+  display: block;
+}
+
+/* Styles for the Backdrop */
+.viralkit_body body.loading::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999999999998;
+}
+
+.viralkit_body .preloader-wrapper {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999999999;
+}
+
+.viralkit_body body.loading .preloader-wrapper {
+  display: block !important;
+}
+
+.viralkit_body .container {
+  background-color: white;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.viralkit_body .center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.viralkit_body .outlined-textarea {
+  padding: 15px !important;
+  border: 1px solid #9e9e9e !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+}
+
+.viralkit_body .outlined-textarea:focus {
+  border: 1px solid #0000ba !important;
+  box-shadow: 0 1px 0 0 #0000ba !important;
+}
+
+.viralkit_body .btn,
+.viralkit_body .btn-large,
+.viralkit_body .btn-small {
+  background: #0000ba;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.viralkit_body .btn:hover,
+.viralkit_body .btn-large:hover,
+.viralkit_body .btn-small:hover,
+.viralkit_body .btn:focus,
+.viralkit_body .btn-large:focus,
+.viralkit_body .btn-small:focus {
+  background: #0000ba;
+  opacity: 0.8;
+  transition: all 0.2s ease-in-out;
+}
+
+.viralkit_body .row .col,
+.viralkit_body .col .row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ViralKit spinner for API generator */
+.viralkit_body #loading-container-wrapper {
+  display: none;
+}
+
+.viralkit_body .loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+}
+
+.viralkit_body .loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.viralkit_body .loading-icon {
+  width: 150px;
+  height: 150px;
+  animation: spin 3s linear infinite;
+}
+
+.viralkit_body .loading-message {
+  margin-top: 30px;
+  font-size: 26px;
+}
+
+.viralkit_body .dot {
+  animation: 1.5s linear infinite loading-dots;
+}
+
+.viralkit_body .dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.viralkit_body .dot:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.viralkit_body .dot:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* Free trial banner */
+.viralkit_body #banner {
+  position: fixed;
+  top: 32px;
+  /* Adjusted for the WordPress admin bar */
+  left: 160px;
+  /* Adjusted to start after the WP admin navigation */
+  width: calc(100% - 160px);
+  /* Adjust the width to keep it 100% of the screen but minus the WP admin navigation */
+  z-index: 1200;
+  color: #fff;
+  background-color: #d90452;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: none;
+  font-size: 15px;
+}
+
+.viralkit_body .banner-text {
+  margin: 0 25px;
+  display: inline-block;
+}
+
+.viralkit_body #upgradeBtn {
+  background-color: #0000ba;
+  /* MUI Primary Button Color */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+/* CONTEST START */
+.viralkit_body .contest {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-end;
+  /* This aligns the left and middle columns to the bottom */
+  background-color: #fff;
+  padding: 15px;
+  margin: 30px 0 0 0;
+  border-radius: 10px;
+  position: relative;
+  /* #eee light box shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Left and Middle columns for the 3-6-3 structure */
+.viralkit_body .contest > div:first-child,
+.viralkit_body .middle-column {
+  flex: 1;
+  /* Allow these to grow and take available space */
+  text-align: left;
+  /* Default text alignment */
+}
+
+/* Specific column widths for the 3-6-3 layout */
+.viralkit_body .contest > div:first-child {
+  /* Leftmost column */
+  max-width: 168px;
+  flex: 0 0 calc(25% - 10px);
+}
+
+.viralkit_body .middle-column {
+  /* Middle column */
+  flex: 0 0 calc(55% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.viralkit_body .contest > div:last-child {
+  /* Rightmost column */
+  width: 22%;
+  align-self: flex-start;
+  text-align: left;
+  margin-left: 20px;
+  padding: 25px 25px 10px 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 10px;
+  position: absolute;
+  right: 15px;
+}
+
+.viralkit_body .contest_title {
+  top: -10px;
+  width: 50%;
+  position: absolute;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.334;
+}
+
+.contest_title a {
+  text-decoration: none;
+}
+
+.viralkit_body .contest-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Thumbnail styling */
+.viralkit_body .contest .left-column img {
+  width: 168px;
+  height: 168px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Rightmost column styling */
+.viralkit_body .contest p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.viralkit_body .contest-actions .btn {
+  margin: 0;
+}
+
+.viralkit_body .contest_stats_each {
+  width: 100%;
+  margin-bottom: 20px !important;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #0000ba;
+  font-weight: bold;
+  float: left;
+}
+
+/* Targeting the textarea's focus state */
+.viralkit_body .materialize-textarea.outlined-textarea:focus {
+  border: 2px solid #0000ba;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 186, 0.25);
+  transition: all 0.01s ease-in-out;
+}
+
+/* Removing the default 2px on the bottom if there's any. */
+.viralkit_body .materialize-textarea.outlined-textarea:focus:not([readonly]) {
+  border: 2px solid #0000ba !important;
+  box-shadow: none !important;
+  transition: all 0.01s ease-in-out;
+}
+
+/* CONTEST END */
+
+/* TOP NAV BAR */
+
+/* Styling the navigation bar */
+.viralkit_body .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow the items to wrap to the next line */
+  justify-content: center;
+  /* Center items horizontally */
+  align-items: center;
+  text-align: center;
+  /* Center items vertically */
+  margin-top: -20px;
+  padding: 15px 5%;
+  background-color: #f7f7f7;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Styling the links in the navbar */
+.viralkit_body .navbar a {
+  margin: 7.5px 15px;
+  /* Allow separation for wrapped links */
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid #0000ba;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  background: #0000ba;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  /* Prevents the text inside the links from breaking into multiple lines */
+  display: flex;
+  align-items: center;
+  /* Vertically centers the text inside the link */
+  height: 40px;
+  text-transform: none;
+  /* Set a consistent height for all links */
+}
+/* 
+.viralkit_body .navbar a:hover {
+  color: #fff;
+  background: #0000ba;
+} */
+
+/* Swal style */
+.viralkit_body .swal-textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  resize: none;
+  outline: none;
+  /* this ensures the textarea style remains unchanged on focus */
+}
+
+.viralkit_body .swal-textarea:focus {
+  border: 1px solid #ccc;
+}
+
+.viralkit_body .confirm-button-custom {
+  background-color: #0000ba !important;
+}
+
+.viralkit_body .swal-embed-contest-wrapper {
+  text-align: left;
+}
+
+.viralkit_body
+  div:where(.swal2-container)
+  button:where(.swal2-styled).swal2-confirm {
+  border: 0;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: #0000ba !important;
+  color: #fff;
+  font-size: 1em;
+}
+
+.viralkit_body .text-left {
+  text-align: left;
+}
+
+.viralkit_body .swal-padding {
+  padding: 30px !important;
+  /* Adjust this value as needed */
+}
+
+/* #banner responsive styles for WP admin left nav */
+@media screen and (max-width: 960px) {
+  .viralkit_body #banner {
+    width: 100%;
+    top: 32px;
+    left: 36px;
+    /* Adjusted for the WordPress admin bar on smaller screens */
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 860px) {
+  .viralkit_body .main-container {
+    margin-top: 88px;
+    /* 42px (banner height) + 46px (admin bar height) */
+  }
+
+  .viralkit_body .contest {
+    flex-direction: column;
+    align-items: flex-start;
+    /* Ensure items align to the left */
+  }
+
+  .viralkit_body .contest > div:first-child {
+    /* Leftmost column */
+    max-width: inherit;
+    flex: 0 0 100%;
+  }
+
+  .viralkit_body .contest .left-column img {
+    width: 100%;
+    max-height: 250px;
+    margin: 0 0 20px 0;
+    object-fit: cover;
+  }
+
+  .viralkit_body .contest > div,
+  .viralkit_body .middle-column {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .viralkit_body .contest_title {
+    width: 100%;
+    margin: 0 0 20px 0;
+    position: relative;
+    text-align: center;
+    /* Title remains center-aligned */
+  }
+
+  .viralkit_body .contest-actions {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    /* Aligns buttons to the start (left) */
+  }
+
+  .viralkit_body .contest > div:last-child {
+    width: 100%;
+    margin-left: 0;
+    position: relative;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  .viralkit_body #banner {
+    width: 100%;
+    top: 46px;
+    left: 0;
+    /* Adjusted for the WordPress admin bar on smaller screens */
+  }
+
+  .viralkit_body #upgrade_now_button_wrapper {
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+  }
+
+  .viralkit_body .navbar {
+    margin-top: 10px;
+  }
+}
+
+/* Hide free trial banner because WP top nav becomes relative */
+@media screen and (max-width: 600px) {
+  .viralkit_body #banner {
+    display: none;
+  }
+
+  .viralkit_body .container_full {
+    margin-top: 0;
+  }
+
+  .viralkit_body .navbar {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .viralkit_body .middle-column {
+    flex: 0 0 calc(60% - 30px);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .viralkit_body .middle-column {
+    flex: 0 0 calc(65% - 30px);
+  }
+}
+
+/* Typing animation */
+.viralkit_body .typing-container {
+  width: 100%;
+  font-size: 16px;
+  /* white-space: pre-wrap; */
+  margin: 30px 0;
+  padding: 10px;
+  text-align: left;
+  /* Aligned text to the left */
+  color: inherit;
+  font-family: inherit;
+  line-height: 24px;
+  float: left;
+}
+
+.viralkit_body .cursor {
+  animation: blink 1s infinite;
+  display: inline-block;
+  /* Ensures the cursor appears to the right of the text */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loading-dots {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* You can style the .circular-progress here if you have a specific design in mind. */
+.viralkit_body .circular-progress {
+  /* Replace this with your spinner's CSS */
+  width: 26px;
+  height: 26px;
+  border: 4px solid rgba(0, 0, 186, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #0000ba;
+  animation: spin 1s linear infinite;
+}
+
+.viralkit_body #ai_generate_contest_user_input::placeholder {
+  color: #aaa;
+}
